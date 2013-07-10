@@ -40,4 +40,8 @@ GestionCursos::Application.routes.draw do
   # Resource routes for controller cursos
   resources :cursos
 
+
+  # Resource routes for controller categories
+  resources :categories
+
 end
