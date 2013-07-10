@@ -210,6 +210,15 @@
     </content-header:>
 
     <content-body: param>
+      <section param="collection-section">
+        <h3 param="collection-heading">
+          <ht key="curso.collection.heading" count="&this.cursos.count" >
+            <human-collection-name collection="cursos" your/>
+          </ht>
+        </h3>
+
+        <collection:cursos param/>
+      </section>
     </content-body:>
 
   </page>
@@ -300,11 +309,12 @@
 
 
 <def tag="show-page" for="Curso">
-  <page merge title="#{ht 'curso.show.title', :default=>['Curso'], :name => name(:no_wrapper => true) }" without-aside >
+  <page merge title="#{ht 'curso.show.title', :default=>['Curso'], :name => name(:no_wrapper => true) }" >
 
     <body: class="show-page curso" param/>
 
     <content-header: param>
+      <a:categories param="parent-link">&laquo; <ht key="curso.actions.back_to_parent" parent="Category" name="&this">Back to <name/></ht></a:categories>
       <h2 param="heading">
         <ht key="curso.show.heading" name="#{name(:no_wrapper => true)}">
           Curso <name/>
@@ -344,6 +354,17 @@
         </section>
       </section>
     </content-body:>
+
+    <aside: param>
+      <section param="categories-collection-section">
+        <h3 param="categories-collection-heading">
+          <ht key="category.collection.heading" count="&this.categories.count" >
+            <human-collection-name collection="categories" your/>
+          </ht>
+        </h3>
+        <collection:categories  param="categories-collection"/>
+      </section>
+    </aside:>
 
   </page>
 </def>

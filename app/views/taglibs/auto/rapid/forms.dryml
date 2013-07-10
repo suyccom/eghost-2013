@@ -16,7 +16,7 @@
 <def tag="form" for="Category">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="" param/>
+    <field-list fields="nombre" param/>
     <div param="actions">
       <submit label="#{ht 'category.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -28,7 +28,7 @@
 <def tag="form" for="Curso">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="titulo, fecha, descripcion, gratuito, ciudad" param/>
+    <field-list fields="titulo, fecha, descripcion, gratuito, ciudad, categories" param/>
     <div param="actions">
       <submit label="#{ht 'curso.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

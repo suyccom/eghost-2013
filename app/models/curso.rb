@@ -10,10 +10,13 @@ class Curso < ActiveRecord::Base
     ciudad enum_string(:bilbao, :vitoria)
     timestamps
   end
-  attr_accessible :titulo, :fecha, :descripcion, :gratuito, :ciudad
+  attr_accessible :titulo, :fecha, :descripcion, :gratuito, :ciudad, :categories
   
   has_many :alumnos
-  children :alumnos
+  children :alumnos, :categories
+  
+  has_many :category_cursos
+  has_many :categories, :through => :category_cursos, :accessible => true
 
   # --- Permissions --- #
 

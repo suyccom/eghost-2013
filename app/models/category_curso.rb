@@ -6,6 +6,9 @@ class CategoryCurso < ActiveRecord::Base
     timestamps
   end
   attr_accessible 
+  
+  belongs_to :category
+  belongs_to :curso
 
   # --- Permissions --- #
 
