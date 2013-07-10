@@ -6,9 +6,11 @@ class Curso < ActiveRecord::Base
     titulo :string, :required, :name => true
     fecha  :date
     descripcion :text
+    gratuito :boolean, :default => true
+    ciudad enum_string(:bilbao, :vitoria)
     timestamps
   end
-  attr_accessible :titulo, :fecha, :descripcion
+  attr_accessible :titulo, :fecha, :descripcion, :gratuito, :ciudad
   
   has_many :alumnos
   children :alumnos

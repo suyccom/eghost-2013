@@ -197,7 +197,7 @@
         </ht>
       </h2>
 
-      <record-flags fields="" param/>
+      <record-flags fields="gratuito" param/>
 
       <a action="edit" if="&can_edit?" param="edit-link">
         <ht key="curso.actions.edit" name="#{name(:no_wrapper => true)}">
@@ -207,7 +207,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="fecha, descripcion" param/>
+      <field-list fields="fecha, descripcion, ciudad" param/>
       <section param="collection-section">
         <h3 param="collection-heading">
           <ht key="alumno.collection.heading" count="&this.alumnos.count" >
