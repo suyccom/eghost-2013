@@ -6,7 +6,6 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
-    <nav-item with="&Alumno"><ht key="alumno.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
   </navigation>
 </def>
@@ -127,6 +126,9 @@
 
 
 
+
+
+
 <!-- ====== Curso Pages ====== -->
 
 <def tag="index-page" for="Curso">
@@ -216,6 +218,18 @@
         </h3>
 
         <collection:alumnos param/>
+
+        <section param="add-to-collection" if="&can_create?(@curso.alumnos)">
+          <h3 param="add-form-heading">
+            <ht key="alumno.collection.add_form_heading" count="1">
+              Add an Alumno
+            </ht>
+          </h3>
+          <form with="&@alumno || new_for_current_user(@curso.alumnos)" owner="curso" without-cancel param>
+            <field-list: skip="curso"/>
+            <submit: label="#{ht 'alumno.actions.add', :default=>['Add'] }"/>
+          </form>
+        </section>
       </section>
     </content-body:>
 

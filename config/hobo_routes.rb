@@ -25,7 +25,16 @@ GestionCursos::Application.routes.draw do
 
 
   # Resource routes for controller alumnos
-  resources :alumnos
+  resources :alumnos, :only => [:new, :edit, :show, :create, :update, :destroy]
+
+  # Owner routes for controller alumnos
+  resources :cursos, :as => :curso, :only => [] do
+    resources :alumnos, :only => [] do
+      collection do
+        post 'create', :action => 'create_for_curso'
+      end
+    end
+  end
 
 
   # Resource routes for controller cursos
