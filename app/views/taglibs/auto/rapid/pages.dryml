@@ -94,7 +94,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="nombre, email, telefono" param/>
+      <field-list fields="nombre, email, telefono, curso" param/>
     </content-body:>
 
   </page>

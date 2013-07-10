@@ -8,7 +8,9 @@ class Alumno < ActiveRecord::Base
     telefono :string
     timestamps
   end
-  attr_accessible :nombre, :email, :telefono
+  attr_accessible :nombre, :email, :telefono, :curso, :curso_id
+  
+  belongs_to :curso
 
   # --- Permissions --- #
 
