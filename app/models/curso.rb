@@ -3,7 +3,7 @@ class Curso < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    titulo :string, :name => true
+    titulo :string, :required, :name => true
     fecha  :date
     descripcion :text
     timestamps
