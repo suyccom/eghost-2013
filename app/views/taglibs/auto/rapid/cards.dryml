@@ -14,6 +14,11 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
+    <body: param>
+      <ht key="alumno.collection.count" count="&this.alumnos.size">
+         <count:alumnos param/>
+      </ht>
+    </body:>
   </card>
 </def>
 

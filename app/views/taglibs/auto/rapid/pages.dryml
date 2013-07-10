@@ -78,6 +78,7 @@
     <body: class="show-page alumno" param/>
 
     <content-header: param>
+      <a:curso param="parent-link">&laquo; <ht key="alumno.actions.back_to_parent" parent="Curso" name="&this">Back to <name/></ht></a:curso>
       <h2 param="heading">
         <ht key="alumno.show.heading" name="#{name(:no_wrapper => true)}">
           Alumno <name/>
@@ -94,7 +95,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="nombre, email, telefono, curso" param/>
+      <field-list fields="email, telefono" param/>
     </content-body:>
 
   </page>
@@ -206,7 +207,16 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="titulo, fecha, descripcion" param/>
+      <field-list fields="fecha, descripcion" param/>
+      <section param="collection-section">
+        <h3 param="collection-heading">
+          <ht key="alumno.collection.heading" count="&this.alumnos.count" >
+            <human-collection-name collection="alumnos" your/>
+          </ht>
+        </h3>
+
+        <collection:alumnos param/>
+      </section>
     </content-body:>
 
   </page>

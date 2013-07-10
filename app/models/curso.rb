@@ -11,6 +11,7 @@ class Curso < ActiveRecord::Base
   attr_accessible :titulo, :fecha, :descripcion
   
   has_many :alumnos
+  children :alumnos
 
   # --- Permissions --- #
 
