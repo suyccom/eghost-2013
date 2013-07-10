@@ -29,3 +29,19 @@ El curso
 ========
 
 Este curso ha sido documentado mediante los commits de Git. Puedes pulsar en "Commits" y ver el histórico del curso y los pasos que se han dado.
+
+
+
+Probar la aplicación
+====================
+
+Si quieres descargar y probar la aplicación completa, realiza los siguientes pasos:
+
+     sudo apt-get install curl
+     curl unoycero.com/get_hobo.sh | bash
+     git clone https://github.com/suyccom/eghost-2013.git
+     cd eghost-2013
+     bundle
+     bundle exec rake db:migrate
+     rails s
+
