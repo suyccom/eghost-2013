@@ -23,4 +23,12 @@ GestionCursos::Application.routes.draw do
   get 'logout(.:format)' => 'users#logout', :as => 'user_logout'
   match 'forgot_password(.:format)' => 'users#forgot_password', :as => 'user_forgot_password'
 
+
+  # Resource routes for controller alumnos
+  resources :alumnos
+
+
+  # Resource routes for controller cursos
+  resources :cursos
+
 end

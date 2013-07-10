@@ -6,8 +6,234 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item href="#{base_url}/">Home</nav-item>
+    <nav-item with="&Alumno"><ht key="alumno.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
   </navigation>
 </def>
+
+
+
+
+<!-- ====== Alumno Pages ====== -->
+
+<def tag="index-page" for="Alumno">
+  <page merge title="#{ht 'alumno.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page alumno" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="alumno.index.heading">
+          <model-name-human model="&model"/>
+        </ht>
+      </h2>
+
+      <p param="count" if>
+        <ht key="alumno.collection.count" count="&collection_count">
+          <count summary/>
+        </ht>
+      </p>
+    </content-header:>
+
+    <content-body: param>
+      <a action="new" to="&model" param="new-link">
+        <ht key="alumno.actions.new">New Alumno</ht>
+      </a>
+
+      <page-nav param="top-page-nav"/>
+
+      <collection param/>
+
+      <page-nav param="bottom-page-nav"/>
+
+
+    </content-body:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Alumno">
+  <page merge title="#{ht 'alumno.new.title', :default=>[' New Alumno'] }">
+    <body: class="new-page alumno" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="alumno.new.heading">
+          New Alumno
+        </ht>
+      </h2>
+    </content-header:>
+
+    <content-body: param>
+      <form param>
+        <submit: label="#{ht 'alumno.actions.create', :default=>['Create Alumno']}"/>
+      </form>
+    </content-body:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Alumno">
+  <page merge title="#{ht 'alumno.show.title', :default=>['Alumno'], :name => name(:no_wrapper => true) }" without-aside >
+
+    <body: class="show-page alumno" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="alumno.show.heading" name="#{name(:no_wrapper => true)}">
+          Alumno <name/>
+        </ht>
+      </h2>
+
+      <record-flags fields="" param/>
+
+      <a action="edit" if="&can_edit?" param="edit-link">
+        <ht key="alumno.actions.edit" name="#{name(:no_wrapper => true)}">
+          Edit Alumno
+        </ht>
+      </a>
+    </content-header:>
+
+    <content-body: param>
+      <field-list fields="nombre, email" param/>
+    </content-body:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Alumno">
+  <page merge title="#{ht 'alumno.edit.title', :default=>['Edit Alumno'], :name => name(:no_wrapper => true) }">
+
+    <body: class="edit-page alumno" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="alumno.edit.heading" name="#{name(:no_wrapper => true)}">
+          Edit Alumno
+        </ht>
+      </h2>
+      <delete-button label="#{ht 'alumno.actions.delete', :default=>['Remove This Alumno']}" param/>
+    </content-header:>
+
+    <content-body: param>
+      <form param/>
+    </content-body:>
+
+  </page>
+</def>
+
+
+
+
+
+<!-- ====== Curso Pages ====== -->
+
+<def tag="index-page" for="Curso">
+  <page merge title="#{ht 'curso.index.title', :default=>[model.model_name.human(:count=>100)] }">
+    <body: class="index-page curso" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="curso.index.heading">
+          <model-name-human model="&model"/>
+        </ht>
+      </h2>
+
+      <p param="count" if>
+        <ht key="curso.collection.count" count="&collection_count">
+          <count summary/>
+        </ht>
+      </p>
+    </content-header:>
+
+    <content-body: param>
+      <a action="new" to="&model" param="new-link">
+        <ht key="curso.actions.new">New Curso</ht>
+      </a>
+
+      <page-nav param="top-page-nav"/>
+
+      <collection param/>
+
+      <page-nav param="bottom-page-nav"/>
+
+
+    </content-body:>
+  </page>
+</def>
+
+
+<def tag="new-page" for="Curso">
+  <page merge title="#{ht 'curso.new.title', :default=>[' New Curso'] }">
+    <body: class="new-page curso" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="curso.new.heading">
+          New Curso
+        </ht>
+      </h2>
+    </content-header:>
+
+    <content-body: param>
+      <form param>
+        <submit: label="#{ht 'curso.actions.create', :default=>['Create Curso']}"/>
+      </form>
+    </content-body:>
+  </page>
+</def>
+
+
+<def tag="show-page" for="Curso">
+  <page merge title="#{ht 'curso.show.title', :default=>['Curso'], :name => name(:no_wrapper => true) }" without-aside >
+
+    <body: class="show-page curso" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="curso.show.heading" name="#{name(:no_wrapper => true)}">
+          Curso <name/>
+        </ht>
+      </h2>
+
+      <record-flags fields="" param/>
+
+      <a action="edit" if="&can_edit?" param="edit-link">
+        <ht key="curso.actions.edit" name="#{name(:no_wrapper => true)}">
+          Edit Curso
+        </ht>
+      </a>
+    </content-header:>
+
+    <content-body: param>
+      <field-list fields="titulo, fecha" param/>
+    </content-body:>
+
+  </page>
+</def>
+
+
+<def tag="edit-page" for="Curso">
+  <page merge title="#{ht 'curso.edit.title', :default=>['Edit Curso'], :name => name(:no_wrapper => true) }">
+
+    <body: class="edit-page curso" param/>
+
+    <content-header: param>
+      <h2 param="heading">
+        <ht key="curso.edit.heading" name="#{name(:no_wrapper => true)}">
+          Edit Curso
+        </ht>
+      </h2>
+      <delete-button label="#{ht 'curso.actions.delete', :default=>['Remove This Curso']}" param/>
+    </content-header:>
+
+    <content-body: param>
+      <form param/>
+    </content-body:>
+
+  </page>
+</def>
+
 
 
 
