@@ -206,7 +206,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="titulo, fecha" param/>
+      <field-list fields="titulo, fecha, descripcion" param/>
     </content-body:>
 
   </page>

@@ -3,11 +3,12 @@ class Curso < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    titulo :string
+    titulo :string, :name => true
     fecha  :date
+    descripcion :text
     timestamps
   end
-  attr_accessible :titulo, :fecha
+  attr_accessible :titulo, :fecha, :descripcion
   
   has_many :alumnos
 
