@@ -5,9 +5,10 @@ class Alumno < ActiveRecord::Base
   fields do
     nombre :string
     email  :email_address
+    telefono :string
     timestamps
   end
-  attr_accessible :nombre, :email
+  attr_accessible :nombre, :email, :telefono
 
   # --- Permissions --- #
 
