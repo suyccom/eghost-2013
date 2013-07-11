@@ -28,3 +28,15 @@
   </navigation>
 </def>
 
+
+<!-- Modificamos la "card" de cada alumno -->
+<def tag="card" for="Alumno">
+  <card class="alumno" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+      <p><this.telefono/></p>
+    </header:>
+  </card>
+</def>
+
+
