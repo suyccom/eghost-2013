@@ -1,0 +1,3 @@
+<show-page without-parent-link>
+  <field-list: tag="editor"/>
+</show-page>
