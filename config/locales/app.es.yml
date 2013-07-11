@@ -17,6 +17,9 @@ es:
       category:
         one: Categoría
         other: Categorías
+      curso:
+        one: Curso
+        other: Cursos
 
 #  attributes:
 #    created_at: Created at
