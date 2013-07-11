@@ -1,7 +1,7 @@
 GestionCursos::Application.routes.draw do
   match ENV['RAILS_RELATIVE_URL_ROOT'] => 'front#index' if ENV['RAILS_RELATIVE_URL_ROOT']
 
-  root :to => 'front#index'
+  root :to => 'cursos#index'
 
   match 'users/:id/reset_password_from_email/:key' => 'users#reset_password', :as => 'reset_password_from_email'
 
