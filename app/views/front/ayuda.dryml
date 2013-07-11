@@ -1,2 +1,8 @@
-<h2>Hola, esta es una página de ayuda</h2>
-En esta página te vamos a explicar de qué va esta aplicación y cómo va a cambiar tu vida :)
+<page title="Ayuda">
+  <content:>
+    <div class="well">
+      <h2>Hola, esta es una página de ayuda</h2>
+      <p>En esta página te vamos a explicar de qué va esta aplicación y cómo va a cambiar tu vida :)</p>
+    </div>
+  </content:>
+</page>
