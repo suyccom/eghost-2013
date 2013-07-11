@@ -25,6 +25,7 @@
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item with="&Curso"><ht key="curso.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
     <nav-item with="&Category"><ht key="category.nav_item" count="100"><model-name-human count="100"/></ht></nav-item>
+    <nav-item href="/ayuda">Ayuda</nav-item>
   </navigation>
 </def>
 
