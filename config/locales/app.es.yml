@@ -11,6 +11,12 @@ es:
   curso:
     index:
       heading: Lista de cursos
+  
+  activerecord:
+    models:
+      category:
+        one: Categoría
+        other: Categorías
 
 #  attributes:
 #    created_at: Created at
