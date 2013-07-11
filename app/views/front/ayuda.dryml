@@ -3,6 +3,12 @@
     <div class="well">
       <h2>Hola, esta es una página de ayuda</h2>
       <p>En esta página te vamos a explicar de qué va esta aplicación y cómo va a cambiar tu vida :)</p>
+      <h3>Estadísticas</h3>
+      <ul>
+        <li>Cursos: <%= @numero_cursos %></li>
+        <li>Alumnos: <%= @numero_alumnos %></li>
+        <li>Media de alumnos por curso: <%= @media_alumnos_por_curso %></li>
+      </ul>
     </div>
   </content:>
 </page>
