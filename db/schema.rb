@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710162244) do
+ActiveRecord::Schema.define(:version => 20130712123458) do
 
   create_table "alumnos", :force => true do |t|
     t.string   "nombre"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20130710162244) do
     t.datetime "updated_at"
     t.string   "state",                                   :default => "active"
     t.datetime "key_timestamp"
+    t.string   "language",                                :default => "es"
   end
 
   add_index "users", ["state"], :name => "index_users_on_state"

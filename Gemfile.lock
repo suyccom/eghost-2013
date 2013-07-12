@@ -195,6 +195,7 @@ DEPENDENCIES
   hobo_bootstrap (= 2.0.1)
   hobo_bootstrap_ui (= 2.0.1)
   hobo_jquery_ui (= 2.0.1)
+  jquery-rails
   jquery-ui-themes (~> 0.0.4)
   json
   quiet_assets

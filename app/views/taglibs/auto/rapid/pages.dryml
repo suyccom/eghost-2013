@@ -314,7 +314,7 @@
     <body: class="show-page curso" param/>
 
     <content-header: param>
-      <a:categories param="parent-link">&laquo; <ht key="curso.actions.back_to_parent" parent="Categoría" name="&this">Back to <name/></ht></a:categories>
+      <a:categories param="parent-link">&laquo; <ht key="curso.actions.back_to_parent" parent="Category" name="&this">Back to <name/></ht></a:categories>
       <h2 param="heading">
         <ht key="curso.show.heading" name="#{name(:no_wrapper => true)}">
           Curso <name/>
@@ -479,7 +479,7 @@
     </content-header:>
 
     <content-body: param>
-      <field-list fields="email_address, state" param/>
+      <field-list fields="email_address, language, state" param/>
     </content-body:>
 
   </page>

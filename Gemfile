@@ -50,3 +50,5 @@ gem "hobo_jquery_ui", "2.0.1"
 gem "hobo_bootstrap_ui", "2.0.1"
 gem "jquery-ui-themes", "~> 0.0.4"
 gem 'bootswatch-rails'
+gem 'jquery-rails'
+
